@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  @apply bg-slate-200;
+}
+
 .router-link-exact-active {
   @apply bg-yellow-300 text-gray-800 hover:text-white;
+}
+
+.main-container {
+  height: calc(100vh - 4.25rem);
 }
