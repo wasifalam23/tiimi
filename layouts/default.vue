@@ -5,7 +5,7 @@
       <StatusBar />
 
       <div class="main-container flex">
-        <main class="p-8 w-full">
+        <main class="p-8 pb-0 w-full">
           <slot />
         </main>
         <div class="ml-auto">
