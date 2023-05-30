@@ -1,19 +1,21 @@
 <template>
   <div class="flex flex-col h-full">
-    <header class="mb-10 max-lg:mb-6">
+    <header class="mb-10 max-lg:mb-6 max-sm:mb-8">
       <div
-        class="flex items-center justify-between max-xl:flex-col max-xl:items-start max-xl:gap-4"
+        class="flex items-center justify-between max-xl:flex-col max-xl:items-start max-xl:gap-4 max-sm:flex-row"
       >
         <div class="flex items-center">
-          <h3 class="text-2xl mr-6 max-xl:text-xl max-xl:mr-4">
+          <h3 class="text-2xl mr-6 max-xl:text-xl max-xl:mr-4 max-sm:hidden">
             56 Candidates
           </h3>
 
           <button
-            class="flex items-center gap-1 border bg-white border-gray-300 px-5 py-2 text-gray-500 rounded-sm max-xl:px-4"
+            class="flex items-center gap-1 border bg-white border-gray-300 px-5 py-2 text-gray-500 rounded-sm max-xl:px-4 max-sm:p-2"
           >
-            <FunnelIcon class="w-6 h-6 max-xl:w-5 max-xl:h-5" />
-            <span class="text-base max-xl:text-sm">Filter</span>
+            <FunnelIcon
+              class="w-6 h-6 max-xl:w-5 max-xl:h-5 max-sm:w-6 max-sm:h-6"
+            />
+            <span class="text-base max-xl:text-sm max-sm:hidden">Filter</span>
           </button>
         </div>
 
@@ -24,12 +26,14 @@
           </div>
 
           <button
-            class="p-2 border border-gray-300 text-gray-500 bg-white rounded-sm mr-5 hover:bg-gray-400 hover:text-white"
+            class="p-2 border border-gray-300 text-gray-500 bg-white rounded-sm mr-5 hover:bg-gray-400 hover:text-white max-md:hidden"
           >
             <HandThumbDownIcon class="w-6 h-6" />
           </button>
 
-          <div class="pr-5 mr-5 border-r border-gray-400">
+          <div
+            class="pr-5 mr-5 border-r border-gray-400 max-md:border-none max-md:mr-0"
+          >
             <button
               class="p-2 border border-gray-300 bg-white text-gray-500 rounded-sm hover:bg-gray-400 hover:text-white"
             >
@@ -44,16 +48,16 @@
           </button>
 
           <button
-            class="p-2 mr-5 border border-gray-300 bg-white text-gray-500 rounded-sm hover:bg-gray-500 hover:text-white"
+            class="p-2 mr-5 border border-gray-300 bg-white text-gray-500 rounded-sm hover:bg-gray-500 hover:text-white max-md:hidden"
           >
             <PrinterIcon class="w-6 h-6 font-semibold" />
           </button>
 
           <button
-            class="flex items-center gap-1 border-2 rounded-md border-black px-5 py-[.54rem]"
+            class="flex items-center gap-1 border-2 rounded-md border-black px-5 py-[.54rem] max-md:p-2"
           >
-            <PlusIcon class="w-4 h-4 font-semibold" />
-            <span class="text-sm font-medium">Add Candidate</span>
+            <PlusIcon class="w-4 h-4 font-semibold max-md:w-5 max-md:h-5" />
+            <span class="text-sm font-medium max-md:hidden">Add Candidate</span>
           </button>
         </div>
       </div>
@@ -63,7 +67,9 @@
 
     <footer class="mt-auto py-3 flex items-center justify-between mb-2">
       <div class="flex gap-4 items-center">
-        <span class="text-gray-500 text-base max-xl:text-sm">View</span>
+        <span class="text-gray-500 text-base max-xl:text-sm max-md:hidden"
+          >View</span
+        >
 
         <button
           id="dropdownDefaultButton"
@@ -114,7 +120,7 @@
           </ul>
         </div>
 
-        <span class="text-gray-500 text-base max-xl:text-sm"
+        <span class="text-gray-500 text-base max-xl:text-sm max-lg:hidden"
           >Candidates per page</span
         >
       </div>

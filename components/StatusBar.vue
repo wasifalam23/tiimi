@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-white shadow-sm">
+  <header class="bg-white shadow-sm max-sm:mx-4 max-sm:rounded-md max-sm:mt-4">
     <div class="flex">
       <div
         class="border-r border-r-gray-300 py-5 px-7 max-xl:px-6 max-xl:py-4 max-lg:hidden"
@@ -10,12 +10,14 @@
       </div>
 
       <div
-        class="border-r border-r-gray-300 pl-5 pr-4 flex items-center justify-center gap-4 max-lg:py-2 max-lg:border-none max-lg:w-1/2 max-lg:justify-start"
+        class="border-r border-r-gray-300 pl-5 pr-4 flex items-center justify-center gap-4 max-lg:py-2 max-lg:border-none max-lg:w-1/2 max-lg:justify-start max-md:gap-1 max-md:w-8/12 max-md:py-4 max-md:pr-1 max-sm:pl-3"
       >
         <div>
-          <h4 class="capitalize text-sm text-gray-500">your organization</h4>
+          <h4 class="capitalize text-sm text-gray-500 max-md:hidden">
+            your organization
+          </h4>
           <div class="flex items-center gap-2">
-            <PhotoIcon class="w-6 h-6 text-cyan-600" />
+            <PhotoIcon class="w-6 h-6 text-cyan-600 max-sm:hidden" />
             <h3 class="text-black text-base max-xl:text-sm">Fikri Studio</h3>
           </div>
         </div>
@@ -23,7 +25,7 @@
         <ChevronUpDownIcon class="text-gray-500 w-6 h-6" />
       </div>
 
-      <form class="pl-5 flex items-center w-1/2">
+      <form class="pl-5 flex items-center w-1/2 max-md:pl-0">
         <label
           for="default-search"
           class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
@@ -46,7 +48,9 @@
         </div>
       </form>
 
-      <div class="ml-auto flex items-center gap-4 pr-6 pl-4 max-xl:gap-3">
+      <div
+        class="ml-auto flex items-center gap-4 pr-6 pl-4 max-xl:gap-3 max-xl:pr-3"
+      >
         <button
           class="flex items-center justify-center bg-yellow-300 p-3 rounded-full max-xl:p-2.5"
         >
@@ -54,7 +58,7 @@
         </button>
 
         <button
-          class="flex items-center justify-center bg-slate-200 p-3 rounded-full max-xl:p-2.5"
+          class="flex items-center justify-center bg-slate-200 p-3 rounded-full max-xl:p-2.5 max-md:hidden"
         >
           <BellIcon class="w-6 h-6 max-xl:w-5 max-xl:h-5" />
         </button>
