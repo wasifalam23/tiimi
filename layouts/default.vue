@@ -5,7 +5,9 @@
       <StatusBar />
 
       <div class="main-container flex">
-        <slot />
+        <main class="p-8 w-full">
+          <slot />
+        </main>
         <div class="ml-auto">
           <TaskMenu />
         </div>

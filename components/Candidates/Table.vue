@@ -1,0 +1,395 @@
+<template>
+  <div class="relative overflow-x-auto">
+    <table
+      class="w-full text-sm text-left text-gray-500 dark:text-gray-400 border-collapse"
+    >
+      <thead class="text-sm text-gray-800 bg-white">
+        <tr>
+          <th scope="col" class="p-4">
+            <div class="flex items-center">
+              <input
+                id="checkbox-all-search"
+                type="checkbox"
+                class="w-5 h-5 text-green-400 bg-gray-100 border-gray-300 focus:ring-white focus:ring-0"
+              />
+              <label for="checkbox-all-search" class="sr-only">checkbox</label>
+            </div>
+          </th>
+          <th scope="col" class="px-3 py-3">
+            <div class="flex items-center gap-1">
+              <span>Candidate Name</span>
+              <ChevronUpDownIcon class="w-4 h-4" />
+            </div>
+          </th>
+          <th scope="col" class="px-3 py-3">
+            <div class="flex items-center gap-1">
+              <span>Rating</span>
+              <ChevronUpDownIcon class="w-4 h-4" />
+            </div>
+          </th>
+          <th scope="col" class="px-3 py-3">
+            <div class="flex items-center gap-1">
+              <span>Stages</span>
+              <ChevronUpDownIcon class="w-4 h-4" />
+            </div>
+          </th>
+          <th scope="col" class="px-3 py-3">
+            <div class="flex items-center gap-1">
+              <span>Team</span>
+              <ChevronUpDownIcon class="w-4 h-4" />
+            </div>
+          </th>
+          <th scope="col" class="px-3 py-3">
+            <div class="flex items-center gap-1">
+              <span>Applied date</span>
+              <ChevronUpDownIcon class="w-4 h-4" />
+            </div>
+          </th>
+
+          <th scope="col" class="px-3 py-3">
+            <div class="flex items-center gap-1">
+              <span>Owner</span>
+              <ChevronUpDownIcon class="w-4 h-4" />
+            </div>
+          </th>
+
+          <th scope="col" class="px-3 py-3">
+            <div class="flex items-center gap-1">&nbsp;</div>
+          </th>
+        </tr>
+      </thead>
+      <tbody class="candidate-tbody">
+        <tr class="text-base bg-white border-b">
+          <td class="w-4 p-4">
+            <div class="flex items-center">
+              <input
+                id="checkbox-table-search-1"
+                type="checkbox"
+                class="w-5 h-5 text-green-400 bg-gray-100 border-gray-300 focus:ring-white focus:ring-0"
+              />
+              <label for="checkbox-table-search-1" class="sr-only"
+                >checkbox</label
+              >
+            </div>
+          </td>
+          <td
+            scope="row"
+            class="flex items-center px-3 py-5 text-gray-900 whitespace-nowrap"
+          >
+            <img
+              class="w-10 h-10 rounded-full"
+              src="@/assets/images/pp-1.jpg"
+              alt="Jese image"
+            />
+
+            <p class="pl-3 truncate">Darlene Robertson</p>
+          </td>
+          <td class="px-3 py-4">
+            <button
+              class="flex items-center gap-1 border px-2 py-[.05rem] rounded-full"
+            >
+              <StarIcon class="text-gray-300 w-4 h-4" />
+              <span class="text-gray-500 text-sm">0.0</span>
+            </button>
+          </td>
+          <td class="px-3 py-4">
+            <div>
+              <div class="flex items-center">
+                <button class="flex items-center gap-1">
+                  <span class="text-black">Screening</span>
+                  <ChevronDownIcon class="w-4 h-4 text-black font-semibold" />
+                </button>
+              </div>
+
+              <div class="flex items-center gap-1 mt-1">
+                <button
+                  class="bg-green-800 px-3 text-sm text-white font-medium rounded-sm"
+                >
+                  1
+                </button>
+                <button
+                  class="bg-green-800 px-3 text-sm text-white font-medium rounded-sm"
+                >
+                  2
+                </button>
+                <button
+                  class="bg-gray-200 px-3 text-sm text-white font-medium rounded-sm"
+                >
+                  &nbsp;
+                </button>
+                <button
+                  class="bg-gray-200 px-3 text-sm text-white font-medium rounded-sm"
+                >
+                  &nbsp;
+                </button>
+                <button
+                  class="bg-gray-200 px-3 text-sm text-white font-medium rounded-sm"
+                >
+                  &nbsp;
+                </button>
+                <button
+                  class="bg-gray-200 px-3 text-sm text-white font-medium rounded-sm"
+                >
+                  &nbsp;
+                </button>
+              </div>
+            </div>
+          </td>
+          <td class="px-3 py-4">
+            <div>
+              <p class="text-black truncate">Junior UI Designer</p>
+              <p class="text-sm">Design Team</p>
+            </div>
+          </td>
+
+          <td class="px-3 py-4">
+            <div class="text-black">01/03/2021</div>
+          </td>
+
+          <td
+            scope="row"
+            class="flex items-center px-3 py-5 text-gray-900 whitespace-nowrap"
+          >
+            <img
+              class="w-10 h-10 rounded-full"
+              src="@/assets/images/pp-2.jpg"
+              alt="Jese image"
+            />
+
+            <p class="pl-3 truncate">Kristin Watson</p>
+          </td>
+
+          <td class="px-3 py-4">
+            <button>
+              <EllipsisHorizontalIcon class="w-6 h-6" />
+            </button>
+          </td>
+        </tr>
+
+        <tr class="text-base bg-white border-b">
+          <td class="w-4 p-4">
+            <div class="flex items-center">
+              <input
+                id="checkbox-table-search-1"
+                type="checkbox"
+                class="w-5 h-5 text-green-400 bg-gray-100 border-gray-300 focus:ring-white focus:ring-0"
+              />
+              <label for="checkbox-table-search-1" class="sr-only"
+                >checkbox</label
+              >
+            </div>
+          </td>
+          <td
+            scope="row"
+            class="flex items-center px-3 py-5 text-gray-900 whitespace-nowrap"
+          >
+            <img
+              class="w-10 h-10 rounded-full"
+              src="@/assets/images/pp-3.jpg"
+              alt="Jese image"
+            />
+
+            <p class="pl-3 truncate">Cody Fisher</p>
+          </td>
+          <td class="px-3 py-4">
+            <button
+              class="flex items-center gap-1 border px-2 py-[.05rem] rounded-full"
+            >
+              <StarIcon class="text-gray-300 w-4 h-4" />
+              <span class="text-gray-500 text-sm">0.0</span>
+            </button>
+          </td>
+          <td class="px-3 py-4">
+            <div>
+              <div class="flex items-center">
+                <button class="flex items-center gap-1">
+                  <span class="text-black">New Applied</span>
+                  <ChevronDownIcon class="w-4 h-4 text-black font-semibold" />
+                </button>
+              </div>
+
+              <div class="flex items-center gap-1 mt-1">
+                <button
+                  class="bg-emerald-400 px-3 text-sm text-white font-medium rounded-sm"
+                >
+                  1
+                </button>
+                <button
+                  class="bg-emerald-400 px-3 text-sm text-white font-medium rounded-sm"
+                >
+                  2
+                </button>
+                <button
+                  class="bg-gray-200 px-3 text-sm text-white font-medium rounded-sm"
+                >
+                  &nbsp;
+                </button>
+                <button
+                  class="bg-gray-200 px-3 text-sm text-white font-medium rounded-sm"
+                >
+                  &nbsp;
+                </button>
+                <button
+                  class="bg-gray-200 px-3 text-sm text-white font-medium rounded-sm"
+                >
+                  &nbsp;
+                </button>
+                <button
+                  class="bg-gray-200 px-3 text-sm text-white font-medium rounded-sm"
+                >
+                  &nbsp;
+                </button>
+              </div>
+            </div>
+          </td>
+          <td class="px-3 py-4">
+            <div>
+              <p class="text-black truncate">Junior UI Designer</p>
+              <p class="text-sm">Design Team</p>
+            </div>
+          </td>
+
+          <td class="px-3 py-4">
+            <div class="text-black">13/03/2021</div>
+          </td>
+
+          <td
+            scope="row"
+            class="flex items-center px-3 py-5 text-gray-900 whitespace-nowrap"
+          >
+            <img
+              class="w-10 h-10 rounded-full"
+              src="@/assets/images/pp-4.jpg"
+              alt="Jese image"
+            />
+
+            <p class="pl-3 truncate">Albert Flores</p>
+          </td>
+
+          <td class="px-3 py-4">
+            <button>
+              <EllipsisHorizontalIcon class="w-6 h-6" />
+            </button>
+          </td>
+        </tr>
+
+        <tr class="text-base bg-white border-b">
+          <td class="w-4 p-4">
+            <div class="flex items-center">
+              <input
+                id="checkbox-table-search-1"
+                type="checkbox"
+                class="w-5 h-5 text-green-400 bg-gray-100 border-gray-300 focus:ring-white focus:ring-0"
+              />
+              <label for="checkbox-table-search-1" class="sr-only"
+                >checkbox</label
+              >
+            </div>
+          </td>
+          <td
+            scope="row"
+            class="flex items-center px-3 py-5 text-gray-900 whitespace-nowrap"
+          >
+            <img
+              class="w-10 h-10 rounded-full"
+              src="@/assets/images/pp-4.jpg"
+              alt="Jese image"
+            />
+
+            <p class="pl-3 truncate">Jenny Wilson</p>
+          </td>
+          <td class="px-3 py-4">
+            <button
+              class="flex items-center gap-1 border px-2 py-[.05rem] rounded-full"
+            >
+              <SolidStartIcon class="text-yellow-300 w-4 h-4" />
+              <span class="text-gray-800 text-sm font-semibold">3.0</span>
+            </button>
+          </td>
+          <td class="px-3 py-4">
+            <div>
+              <div class="flex items-center">
+                <button class="flex items-center gap-1">
+                  <span class="text-black">Design Challange</span>
+                  <ChevronDownIcon class="w-4 h-4 text-black font-semibold" />
+                </button>
+              </div>
+
+              <div class="flex items-center gap-1 mt-1">
+                <button
+                  class="bg-orange-400 px-3 text-sm text-white font-medium rounded-sm"
+                >
+                  1
+                </button>
+                <button
+                  class="bg-orange-400 px-3 text-sm text-white font-medium rounded-sm"
+                >
+                  2
+                </button>
+                <button
+                  class="bg-orange-400 px-3 text-sm text-white font-medium rounded-sm"
+                >
+                  3
+                </button>
+                <button
+                  class="bg-gray-200 px-3 text-sm text-white font-medium rounded-sm"
+                >
+                  &nbsp;
+                </button>
+                <button
+                  class="bg-gray-200 px-3 text-sm text-white font-medium rounded-sm"
+                >
+                  &nbsp;
+                </button>
+                <button
+                  class="bg-gray-200 px-3 text-sm text-white font-medium rounded-sm"
+                >
+                  &nbsp;
+                </button>
+              </div>
+            </div>
+          </td>
+          <td class="px-3 py-4">
+            <div>
+              <p class="text-black truncate">UX Researcher</p>
+              <p class="text-sm">Design Team</p>
+            </div>
+          </td>
+
+          <td class="px-3 py-4">
+            <div class="text-black">28/08/2021</div>
+          </td>
+
+          <td
+            scope="row"
+            class="flex items-center px-3 py-5 text-gray-900 whitespace-nowrap"
+          >
+            <img
+              class="w-10 h-10 rounded-full"
+              src="@/assets/images/pp-2.jpg"
+              alt="Jese image"
+            />
+
+            <p class="pl-3 truncate">Dianne Russell</p>
+          </td>
+
+          <td class="px-3 py-4">
+            <button>
+              <EllipsisHorizontalIcon class="w-6 h-6" />
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</template>
+
+<script setup>
+import {
+  ChevronDownIcon,
+  ChevronUpDownIcon,
+  EllipsisHorizontalIcon,
+  StarIcon as SolidStartIcon,
+} from '@heroicons/vue/24/solid';
+import { StarIcon } from '@heroicons/vue/24/outline';
+</script>

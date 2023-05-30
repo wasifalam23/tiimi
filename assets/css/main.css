@@ -13,3 +13,13 @@ body {
 .main-container {
   height: calc(100vh - 4.25rem);
 }
+
+.candidate-tbody:before {
+  /* This doesn't work because of border-collapse */
+  line-height: 2em;
+  content: '.';
+  color: white; /* bacground color */
+  display: block;
+
+  @apply text-slate-200;
+}
