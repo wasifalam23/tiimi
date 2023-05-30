@@ -1,66 +1,74 @@
 <template>
   <div class="flex flex-col h-full">
-    <header class="flex items-center mb-10">
-      <h3 class="text-2xl mr-6">56 Candidates</h3>
-
-      <button
-        class="flex items-center gap-1 border bg-white border-gray-300 px-5 py-2 text-gray-500 rounded-sm"
+    <header class="mb-10">
+      <div
+        class="flex items-center justify-between max-xl:flex-col max-xl:items-start max-xl:gap-4"
       >
-        <FunnelIcon class="w-6 h-6" />
-        <span class="text-base">Filter</span>
-      </button>
+        <div class="flex items-center">
+          <h3 class="text-2xl mr-6 max-xl:text-xl max-xl:mr-4">
+            56 Candidates
+          </h3>
 
-      <div class="ml-auto flex items-center">
-        <div class="flex items-center gap-2 mr-6">
-          <span class="text-2xl font-semibold">3</span>
-          <p class="text-base text-gray-500">Selected</p>
-        </div>
-
-        <button
-          class="p-2 border border-gray-300 text-gray-500 bg-white rounded-sm mr-5 hover:bg-gray-400 hover:text-white"
-        >
-          <HandThumbDownIcon class="w-6 h-6" />
-        </button>
-
-        <div class="pr-5 mr-5 border-r border-gray-400">
           <button
-            class="p-2 border border-gray-300 bg-white text-gray-500 rounded-sm hover:bg-gray-400 hover:text-white"
+            class="flex items-center gap-1 border bg-white border-gray-300 px-5 py-2 text-gray-500 rounded-sm max-xl:px-4"
           >
-            <EllipsisVerticalIcon class="w-6 h-6 font-semibold" />
+            <FunnelIcon class="w-6 h-6 max-xl:w-5 max-xl:h-5" />
+            <span class="text-base max-xl:text-sm">Filter</span>
           </button>
         </div>
 
-        <button
-          class="p-2 mr-5 border border-gray-300 bg-white text-gray-500 rounded-sm hover:bg-gray-500 hover:text-white"
-        >
-          <ArrowDownTrayIcon class="w-6 h-6 font-semibold" />
-        </button>
+        <div class="flex items-center">
+          <div class="flex items-center gap-2 mr-6 max-xl:gap-1 max-xl:mr-5">
+            <span class="text-2xl font-semibold max-xl:text-xl">3</span>
+            <p class="text-base text-gray-500 max-xl:text-sm">Selected</p>
+          </div>
 
-        <button
-          class="p-2 mr-5 border border-gray-300 bg-white text-gray-500 rounded-sm hover:bg-gray-500 hover:text-white"
-        >
-          <PrinterIcon class="w-6 h-6 font-semibold" />
-        </button>
+          <button
+            class="p-2 border border-gray-300 text-gray-500 bg-white rounded-sm mr-5 hover:bg-gray-400 hover:text-white"
+          >
+            <HandThumbDownIcon class="w-6 h-6" />
+          </button>
 
-        <button
-          class="flex items-center gap-1 border-2 rounded-md border-black px-5 py-[.54rem]"
-        >
-          <PlusIcon class="w-4 h-4 font-semibold" />
-          <span class="text-sm font-medium">Add Candidate</span>
-        </button>
+          <div class="pr-5 mr-5 border-r border-gray-400">
+            <button
+              class="p-2 border border-gray-300 bg-white text-gray-500 rounded-sm hover:bg-gray-400 hover:text-white"
+            >
+              <EllipsisVerticalIcon class="w-6 h-6 font-semibold" />
+            </button>
+          </div>
+
+          <button
+            class="p-2 mr-5 border border-gray-300 bg-white text-gray-500 rounded-sm hover:bg-gray-500 hover:text-white"
+          >
+            <ArrowDownTrayIcon class="w-6 h-6 font-semibold" />
+          </button>
+
+          <button
+            class="p-2 mr-5 border border-gray-300 bg-white text-gray-500 rounded-sm hover:bg-gray-500 hover:text-white"
+          >
+            <PrinterIcon class="w-6 h-6 font-semibold" />
+          </button>
+
+          <button
+            class="flex items-center gap-1 border-2 rounded-md border-black px-5 py-[.54rem]"
+          >
+            <PlusIcon class="w-4 h-4 font-semibold" />
+            <span class="text-sm font-medium">Add Candidate</span>
+          </button>
+        </div>
       </div>
     </header>
 
     <CandidatesTable />
 
-    <footer class="mt-auto py-4 flex items-center justify-between">
+    <footer class="mt-auto py-3 flex items-center justify-between mb-2">
       <div class="flex gap-4 items-center">
-        <span class="text-gray-500 text-base">View</span>
+        <span class="text-gray-500 text-base max-xl:text-sm">View</span>
 
         <button
           id="dropdownDefaultButton"
           data-dropdown-toggle="dropdown"
-          class="text-gray-600 bg-white hover:bg-green-200 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-md text-sm px-4 py-2.5 text-center inline-flex items-center"
+          class="text-gray-600 bg-white hover:bg-green-200 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-md text-sm px-4 py-2.5 text-center inline-flex items-center max-xl:px-3 max-xl:py-2"
           type="button"
         >
           10
@@ -106,17 +114,19 @@
           </ul>
         </div>
 
-        <span class="text-gray-500 text-base">Candidates per page</span>
+        <span class="text-gray-500 text-base max-xl:text-sm"
+          >Candidates per page</span
+        >
       </div>
 
       <nav aria-label="Page navigation example">
         <ul class="inline-flex -space-x-px items-center gap-2">
           <li>
             <div class="flex items-center text-gray-500">
-              <ChevronLeftIcon class="w-5 h-5" />
+              <ChevronLeftIcon class="w-5 h-5 max-xl:w-4 max-xl:h-4" />
               <a
                 href="#"
-                class="pl-1 pr-2 py-2 ml-0 leading-tight text-base rounded-l-lg hover:text-gray-700"
+                class="pl-1 pr-2 py-2 ml-0 leading-tight text-base rounded-l-lg hover:text-gray-700 max-xl:text-sm"
                 >Prev</a
               >
             </div>
@@ -124,35 +134,35 @@
           <li>
             <a
               href="#"
-              class="px-2 py-1 font-medium leading-tight bg-yellow-300 rounded-full hover:bg-yellow-400"
+              class="px-2 py-1 font-medium leading-tight bg-yellow-300 rounded-full hover:bg-yellow-400 max-xl:text-sm"
               >1</a
             >
           </li>
           <li>
             <a
               href="#"
-              class="px-2 py-1 font-medium leading-tight rounded-full hover:bg-yellow-400"
+              class="px-2 py-1 font-medium leading-tight rounded-full hover:bg-yellow-400 max-xl:text-sm"
               >2</a
             >
           </li>
           <li>
             <a
               href="#"
-              class="px-2 py-1 font-medium leading-tight rounded-full hover:bg-yellow-400"
+              class="px-2 py-1 font-medium leading-tight rounded-full hover:bg-yellow-400 max-xl:text-sm"
               >3</a
             >
           </li>
           <li>
             <a
               href="#"
-              class="px-2 py-1 font-medium leading-tight rounded-full hover:bg-yellow-400"
+              class="px-2 py-1 font-medium leading-tight rounded-full hover:bg-yellow-400 max-xl:text-sm"
               >...</a
             >
           </li>
           <li>
             <a
               href="#"
-              class="px-2 py-1 font-medium leading-tight rounded-full hover:bg-yellow-400"
+              class="px-2 py-1 font-medium leading-tight rounded-full hover:bg-yellow-400 max-xl:text-sm"
               >24</a
             >
           </li>
@@ -161,10 +171,10 @@
             <div class="flex items-center text-gray-500">
               <a
                 href="#"
-                class="pl-1 pr-2 py-2 ml-0 leading-tight text-base rounded-l-lg hover:text-gray-700"
+                class="pl-1 pr-2 py-2 ml-0 leading-tight text-base rounded-l-lg hover:text-gray-700 max-xl:text-sm"
                 >Next</a
               >
-              <ChevronRightIcon class="w-5 h-5" />
+              <ChevronRightIcon class="w-5 h-5 max-xl:w-4 max-xl:h-4" />
             </div>
           </li>
         </ul>

@@ -33,6 +33,7 @@
               <ChevronUpDownIcon class="w-4 h-4" />
             </div>
           </th>
+
           <th scope="col" class="px-3 py-3">
             <div class="flex items-center gap-1">
               <span>Team</span>
@@ -72,10 +73,7 @@
               >
             </div>
           </td>
-          <td
-            scope="row"
-            class="flex items-center px-3 py-5 text-gray-900 whitespace-nowrap"
-          >
+          <td scope="row" class="flex items-center px-3 py-5 text-gray-900">
             <img
               class="w-10 h-10 rounded-full"
               src="@/assets/images/pp-1.jpg"
@@ -135,11 +133,10 @@
               </div>
             </div>
           </td>
+
           <td class="px-3 py-4">
-            <div>
-              <p class="text-black truncate">Junior UI Designer</p>
-              <p class="text-sm">Design Team</p>
-            </div>
+            <p class="text-black truncate">Junior UI Designer</p>
+            <p class="text-sm">Design Team</p>
           </td>
 
           <td class="px-3 py-4">
