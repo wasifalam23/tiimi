@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col h-full">
-    <header class="mb-10">
+    <header class="mb-10 max-lg:mb-6">
       <div
         class="flex items-center justify-between max-xl:flex-col max-xl:items-start max-xl:gap-4"
       >

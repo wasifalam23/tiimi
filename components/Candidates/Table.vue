@@ -60,7 +60,7 @@
         </tr>
       </thead>
       <tbody class="candidate-tbody">
-        <tr class="text-base bg-white border-b">
+        <tr class="text-base bg-white border-b max-xl:text-sm">
           <td class="w-4 p-4 rounded-tl-md">
             <div class="flex items-center">
               <input
@@ -163,7 +163,7 @@
           </td>
         </tr>
 
-        <tr class="text-base bg-white border-b">
+        <tr class="text-base bg-white border-b max-xl:text-sm">
           <td class="w-4 p-4">
             <div class="flex items-center">
               <input
@@ -270,7 +270,7 @@
           </td>
         </tr>
 
-        <tr class="text-base bg-white border-b">
+        <tr class="text-base bg-white border-b max-xl:text-sm">
           <td class="w-4 p-4">
             <div class="flex items-center">
               <input
@@ -377,7 +377,7 @@
           </td>
         </tr>
 
-        <tr class="text-base bg-white border-b">
+        <tr class="text-base bg-white border-b max-xl:text-sm">
           <td class="w-4 p-4">
             <div class="flex items-center">
               <input
@@ -484,7 +484,7 @@
           </td>
         </tr>
 
-        <tr class="text-base bg-white border-b">
+        <tr class="text-base bg-white border-b max-xl:text-sm">
           <td class="w-4 p-4">
             <div class="flex items-center">
               <input
@@ -591,7 +591,7 @@
           </td>
         </tr>
 
-        <tr class="text-base bg-white border-b">
+        <tr class="text-base bg-white border-b max-xl:text-sm">
           <td class="w-4 p-4">
             <div class="flex items-center">
               <input
