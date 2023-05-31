@@ -66,7 +66,7 @@ const { id, candidate, rating, stages, team, appliedDate, owner } = defineProps(
           <div
             v-for="n in stages.value"
             :key="n"
-            :class="`${stages.color} px-3 text-sm text-white font-medium rounded-sm`"
+            :class="`${stages.color} w-7 flex items-center justify-center text-sm text-white font-medium rounded-sm`"
           >
             {{ n }}
           </div>
@@ -74,7 +74,7 @@ const { id, candidate, rating, stages, team, appliedDate, owner } = defineProps(
           <div
             v-for="n in 6 - stages.value"
             :key="n"
-            :class="`bg-gray-200 px-3 text-sm text-white font-medium rounded-sm`"
+            :class="`bg-gray-200 w-7 flex items-center justify-center text-sm text-white font-medium rounded-sm`"
           >
             &nbsp;
           </div>
