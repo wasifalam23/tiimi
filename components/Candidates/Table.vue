@@ -1,4 +1,5 @@
 <script setup>
+import { useCandidate } from '~/composables/useCandidate';
 import { ChevronUpDownIcon } from '@heroicons/vue/24/solid';
 import p1 from '@/assets/images/pp-1.jpg';
 import p2 from '@/assets/images/pp-2.jpg';
@@ -132,9 +133,20 @@ const DUMMY_DATA = [
     },
   },
 ];
+
+const cDetails = ref({});
+const { currentCandidate, setCandidate } = useCandidate();
+const handleClick = (item) => {
+  // setCandidate(item);
+  setCandidate({ ...item });
+};
+
+// watchEffect(() => {
+//   console.log(cDetails.value);
+// });
 </script>
 <template>
-  <CandidatesDetails />
+  <CandidatesDetails :data="cDetails" />
   <div class="relative overflow-x-auto rounded-md">
     <table
       class="w-full text-sm text-left text-gray-500 dark:text-gray-400 border-collapse"
@@ -206,6 +218,7 @@ const DUMMY_DATA = [
           :team="data.team"
           :appliedDate="data.appliedDate"
           :owner="data.owner"
+          :handleClick="handleClick"
         />
       </tbody>
     </table>

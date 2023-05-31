@@ -1,5 +1,6 @@
 <script setup>
 import { Tabs, initTabs } from 'flowbite';
+import { useCandidate } from '~/composables/useCandidate';
 
 import {
   ChevronDownIcon,
@@ -12,8 +13,16 @@ import {
   EnvelopeIcon,
 } from '@heroicons/vue/24/outline';
 
+const { data } = defineProps(['data']);
+
 onMounted(() => {
   initTabs();
+});
+
+const { currentCandidate } = useCandidate();
+console.log(currentCandidate.value);
+watch(data.age, () => {
+  console.log(dataR);
 });
 </script>
 

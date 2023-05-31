@@ -6,9 +6,18 @@ import {
 } from '@heroicons/vue/24/solid';
 import { StarIcon } from '@heroicons/vue/24/outline';
 
-const { id, candidate, rating, stages, team, appliedDate, owner } = defineProps(
-  ['id', 'candidate', 'rating', 'stages', 'team', 'appliedDate', 'owner']
-);
+const item = defineProps([
+  'id',
+  'candidate',
+  'rating',
+  'stages',
+  'team',
+  'appliedDate',
+  'owner',
+  'handleClick',
+]);
+const { id, candidate, rating, stages, team, appliedDate, owner, handleClick } =
+  item;
 </script>
 
 <template>
@@ -25,6 +34,7 @@ const { id, candidate, rating, stages, team, appliedDate, owner } = defineProps(
     </td>
     <td
       id="button-open"
+      @click="handleClick(item)"
       scope="row"
       class="flex items-center px-3 py-5 text-gray-900 cursor-pointer"
     >

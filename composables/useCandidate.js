@@ -1,8 +1,9 @@
-export default function useCandidate() {
-  const currentCandidate = ref({});
+const currentCandidate = ref({});
+const setCandidate = (obj) => {
+  currentCandidate.value = obj;
+  // console.log(currentCandidate.value);
+};
 
-  function setCandidate(value) {
-    currentCandidate.value = value;
-  }
-  return [currentCandidate, setCandidate];
-}
+export const useCandidate = () => {
+  return { currentCandidate, setCandidate };
+};
