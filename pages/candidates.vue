@@ -10,7 +10,7 @@
           </h3>
 
           <button
-            class="flex items-center gap-1 border bg-white border-gray-300 px-5 py-2 text-gray-500 rounded-sm max-xl:px-4 max-sm:p-2"
+            class="flex items-center gap-1 border bg-white border-gray-300 px-5 py-2 text-gray-500 rounded-md max-xl:px-4 max-sm:p-2"
           >
             <FunnelIcon
               class="w-6 h-6 max-xl:w-5 max-xl:h-5 max-sm:w-6 max-sm:h-6"
@@ -26,7 +26,7 @@
           </div>
 
           <button
-            class="p-2 border border-gray-300 text-gray-500 bg-white rounded-sm mr-5 hover:bg-gray-400 hover:text-white max-md:hidden"
+            class="p-2 border border-gray-300 text-gray-500 bg-white rounded-md mr-5 hover:bg-gray-400 hover:text-white max-md:hidden"
           >
             <HandThumbDownIcon class="w-6 h-6" />
           </button>
@@ -35,20 +35,20 @@
             class="pr-5 mr-5 border-r border-gray-400 max-md:border-none max-md:mr-0"
           >
             <button
-              class="p-2 border border-gray-300 bg-white text-gray-500 rounded-sm hover:bg-gray-400 hover:text-white"
+              class="p-2 border border-gray-300 bg-white text-gray-500 rounded-md hover:bg-gray-400 hover:text-white"
             >
               <EllipsisVerticalIcon class="w-6 h-6 font-semibold" />
             </button>
           </div>
 
           <button
-            class="p-2 mr-5 border border-gray-300 bg-white text-gray-500 rounded-sm hover:bg-gray-500 hover:text-white"
+            class="p-2 mr-5 border border-gray-300 bg-white text-gray-500 rounded-md hover:bg-gray-500 hover:text-white"
           >
             <ArrowDownTrayIcon class="w-6 h-6 font-semibold" />
           </button>
 
           <button
-            class="p-2 mr-5 border border-gray-300 bg-white text-gray-500 rounded-sm hover:bg-gray-500 hover:text-white max-md:hidden"
+            class="p-2 mr-5 border border-gray-300 bg-white text-gray-500 rounded-md hover:bg-gray-500 hover:text-white max-md:hidden"
           >
             <PrinterIcon class="w-6 h-6 font-semibold" />
           </button>
