@@ -34,7 +34,7 @@ onMounted(() => {
     $buttonElement.forEach((el) => {
       el.addEventListener('click', () => drawer.toggle());
     });
-    $closeButton.addEventListener('click', () => drawer.hide());
+    // $closeButton.addEventListener('click', () => drawer.hide());
   }
 });
 
@@ -134,7 +134,7 @@ const DUMMY_DATA = [
 ];
 </script>
 <template>
-  <SideDrawer />
+  <CandidatesDetails />
   <div class="relative overflow-x-auto rounded-md">
     <table
       class="w-full text-sm text-left text-gray-500 dark:text-gray-400 border-collapse"
