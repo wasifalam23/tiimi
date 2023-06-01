@@ -8,6 +8,7 @@ import {
   ChevronLeftIcon,
   StarIcon as SolidStartIcon,
   ArrowDownTrayIcon,
+  PlusCircleIcon,
 } from '@heroicons/vue/24/solid';
 import {
   ChatBubbleBottomCenterTextIcon,
@@ -15,6 +16,8 @@ import {
   PencilSquareIcon,
   LinkIcon,
   PrinterIcon,
+  ChevronDoubleRightIcon,
+  TrashIcon,
 } from '@heroicons/vue/24/outline';
 
 const { data } = defineProps(['data']);
@@ -483,7 +486,187 @@ watch(data.age, () => {
         role="tabpanel"
         aria-labelledby="pipeline-tab"
       >
-        pipeline
+        <div>
+          <div class="flex gap-2 items-center text-sm mb-4">
+            <span class="text-gray-600">Stage of:</span>
+            <p class="text-gray-800 font-medium">Design Team - UI Designer</p>
+          </div>
+
+          <ol
+            class="flex items-center justify-between w-full space-x-2 text-sm font-medium text-center text-gray-500 bg-white rounded-md sm:space-x-4 border border-slate-200 px-3 py-2"
+          >
+            <li class="flex items-center text-gray-600">
+              <span>Screening</span>
+              <ChevronDoubleRightIcon class="w-4 h-4 ml-2 sm:ml-4" />
+            </li>
+            <li class="flex items-center">
+              <span class="">Design Challange</span>
+              <ChevronDoubleRightIcon class="w-4 h-4 ml-2 sm:ml-4" />
+            </li>
+            <li class="flex items-center text-orange-400">
+              <span>Interview</span>
+              <ChevronDoubleRightIcon class="w-4 h-4 ml-2 sm:ml-4" />
+            </li>
+            <li class="flex items-center">
+              <span>Test</span>
+              <ChevronDoubleRightIcon class="w-4 h-4 ml-2 sm:ml-4" />
+            </li>
+            <li class="flex items-center">
+              <span>Hired</span>
+              <ChevronDoubleRightIcon class="w-4 h-4 ml-2 sm:ml-4" />
+            </li>
+          </ol>
+
+          <div class="rounded border border-slate-300 mt-4">
+            <div class="px-4 py-3 border-b border-b-slate-300">
+              <h3 class="text-sm font-semibold">Detail</h3>
+            </div>
+
+            <div class="p-4 grid grid-cols-[40fr_60fr] gap-y-4">
+              <div>
+                <span class="text-slate-500 text-sm font-medium"
+                  >Current Status</span
+                >
+                <div class="flex items-center gap-2">
+                  <div
+                    class="uppercase bg-green-900 rounded-full px-2 py-[.1rem] w-fit text-white flex items-center justify-center"
+                  >
+                    <span class="text-[.6rem] font-medium">Active</span>
+                  </div>
+
+                  <button class="text-xs text-green-500 font-medium">
+                    (View Workflow)
+                  </button>
+                </div>
+              </div>
+              <div>
+                <span class="text-slate-500 text-sm font-medium">Assignee</span>
+                <div class="flex gap-2 items-center">
+                  <img
+                    src="@/assets/images/pp-2.jpg"
+                    alt="owner-image"
+                    class="w-7 h-7 rounded-full"
+                  />
+
+                  <p class="text-xs text-gray-700 font-medium">
+                    Andri R. Hemington
+                  </p>
+                </div>
+              </div>
+              <div>
+                <span class="text-slate-500 text-sm font-medium">Stage</span>
+                <p class="text-sm font-semibold text-gray-700">Interview</p>
+              </div>
+              <div>
+                <span class="text-slate-500 text-sm font-medium">Owner</span>
+                <div class="flex gap-2 items-center">
+                  <img
+                    src="@/assets/images/pp-3.jpg"
+                    alt="owner-image"
+                    class="w-7 h-7 rounded-full"
+                  />
+
+                  <p class="text-xs text-gray-700 font-medium">Bagus Fikri</p>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <span class="text-slate-500 text-sm font-medium">Date</span>
+                  <p class="text-sm font-semibold text-gray-700">
+                    14 - 16 Mar 2021
+                  </p>
+                </div>
+              </div>
+
+              <div class="self-center justify-self-end">
+                <button
+                  class="capitalize text-xs border border-green-700 rounded-md px-3 py-2 text-green-700 font-semibold"
+                >
+                  move next status
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded border border-slate-300 mt-4">
+            <div
+              class="px-4 py-3 border-b border-b-slate-300 flex justify-between items-center"
+            >
+              <h3 class="text-sm font-semibold">Notes</h3>
+              <div>
+                <button class="flex items-center gap-1">
+                  <span class="text-sm font-medium text-slate-600"
+                    >Recent First</span
+                  >
+                  <ChevronDownIcon class="w-4 h-4" />
+                </button>
+              </div>
+            </div>
+
+            <div class="px-4 py-6 pr-0">
+              <header>
+                <button class="flex items-center gap-1 ml-10">
+                  <PlusCircleIcon class="w-5 h-5 text-green-700" />
+                  <span class="text-green-500 font-semibold text-xs"
+                    >Add Note</span
+                  >
+                </button>
+              </header>
+
+              <div class="flex gap-2 mt-4 border-b border-b-slate-200 pb-4">
+                <img
+                  src="@/assets/images/pp-4.jpg"
+                  alt="people image"
+                  class="w-8 h-8 rounded-full"
+                />
+
+                <div>
+                  <div class="flex text-xs items-center gap-2">
+                    <p class="font-semibold text-gray-600">Bagus Fikri</p>
+                    <span class="text-gray-700">13 Mar 2021 - 04:23 PM</span>
+                  </div>
+
+                  <p class="text-xs text-gray-600 font-medium">
+                    Candidate Successfully Interviewed for this stage
+                  </p>
+
+                  <button class="text-green-400 font-medium text-xs">
+                    2 Reply
+                  </button>
+                </div>
+                <ChatBubbleBottomCenterTextIcon
+                  class="w-5 h-5 text-gray-500 ml-auto mr-6"
+                />
+              </div>
+
+              <div class="flex gap-2 mt-4">
+                <img
+                  src="@/assets/images/pp-2.jpg"
+                  alt="people image"
+                  class="w-8 h-8 rounded-full"
+                />
+
+                <div>
+                  <div class="flex text-xs items-center gap-2">
+                    <p class="font-semibold text-gray-600">Andri R. Hemi</p>
+                    <span class="text-gray-700">13 Mar 2021 - 04:23 PM</span>
+                  </div>
+
+                  <p class="text-xs text-gray-600 font-medium">
+                    Submitted for client review
+                  </p>
+
+                  <button class="text-green-400 font-medium text-xs">
+                    2 Reply
+                  </button>
+                </div>
+                <ChatBubbleBottomCenterTextIcon
+                  class="w-5 h-5 text-gray-500 ml-auto mr-6"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div
         class="hidden p-4 rounded-lg dark:bg-gray-800"
@@ -491,7 +674,184 @@ watch(data.age, () => {
         role="tabpanel"
         aria-labelledby="interviews-tab"
       >
-        interviews
+        <div>
+          <header class="flex items-center justify-between">
+            <h4 class="text-sm font-semibold">Interview List</h4>
+            <button class="flex gap-1 items-center">
+              <PlusCircleIcon class="w-5 h-5 text-green-700" />
+              <span class="capitalize text-xs font-semibold text-green-500"
+                >Add schedule interview</span
+              >
+            </button>
+          </header>
+
+          <div class="mt-6 flex flex-col gap-6">
+            <div>
+              <header class="flex justify-between mb-2">
+                <p class="text-xs font-medium text-gray-600">
+                  Mar 18, 2021(Thursday)
+                </p>
+                <div class="flex items-center gap-1">
+                  <button>
+                    <PencilSquareIcon class="w-5 h-5 text-gray-500" />
+                  </button>
+                  <button>
+                    <TrashIcon class="w-5 h-5 text-gray-500" />
+                  </button>
+                </div>
+              </header>
+
+              <div
+                class="border border-slate-200 rounded-md px-3 py-4 border-l-4 border-l-cyan-500"
+              >
+                <div class="items-center grid grid-cols-4">
+                  <div class="flex items-center gap-2">
+                    <img
+                      class="w-8 h-8 rounded-full"
+                      src="@/assets/images/pp-1.jpg"
+                      alt="pp-1"
+                    />
+
+                    <div class="text-xs">
+                      <p class="font-semibold">Bagus Fakri</p>
+                      <p class="text-gray-600">Written Test - Onsite</p>
+                    </div>
+                  </div>
+
+                  <div class="text-xs">
+                    <p class="font-semibold">3:30 - 4:30PM</p>
+                    <p class="text-gray-600">1 Hour Interview</p>
+                  </div>
+
+                  <div class="text-xs">
+                    <p class="font-semibold">Townhall Room 12</p>
+                    <p class="text-gray-600">
+                      Scheduled by
+
+                      <span class="font-medium text-gray-800">Bagus Fikri</span>
+                    </p>
+                  </div>
+
+                  <button
+                    class="text-green-700 text-xs font-semibold border border-green-700 px-3 py-2 rounded-md w-fit justify-self-end"
+                  >
+                    Submit Feedback
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <header class="flex justify-between mb-2">
+                <p class="text-xs font-medium text-gray-600">
+                  Mar 18, 2021(Thursday)
+                </p>
+                <div class="flex items-center gap-1">
+                  <button>
+                    <PencilSquareIcon class="w-5 h-5 text-gray-500" />
+                  </button>
+                  <button>
+                    <TrashIcon class="w-5 h-5 text-gray-500" />
+                  </button>
+                </div>
+              </header>
+
+              <div
+                class="border border-slate-200 rounded-md px-3 py-4 border-l-4 border-l-yellow-400"
+              >
+                <div class="items-center grid grid-cols-4">
+                  <div class="flex items-center gap-2">
+                    <img
+                      class="w-8 h-8 rounded-full"
+                      src="@/assets/images/pp-2.jpg"
+                      alt="pp-1"
+                    />
+
+                    <div class="text-xs">
+                      <p class="font-semibold">Andri R. Herdi</p>
+                      <p class="text-gray-600">Tec Round - Onsite</p>
+                    </div>
+                  </div>
+
+                  <div class="text-xs">
+                    <p class="font-semibold">2:30 - 3:00PM</p>
+                    <p class="text-gray-600">1 Hour Interview</p>
+                  </div>
+
+                  <div class="text-xs">
+                    <p class="font-semibold">Townhall Room 12</p>
+                    <p class="text-gray-600">
+                      Scheduled by
+
+                      <span class="font-medium text-gray-800">Bagus Fikri</span>
+                    </p>
+                  </div>
+
+                  <button
+                    class="text-green-700 text-xs font-semibold border border-green-700 px-3 py-2 rounded-md w-fit justify-self-end"
+                  >
+                    Submit Feedback
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <header class="flex justify-between mb-2">
+                <p class="text-xs font-medium text-gray-600">
+                  Mar 18, 2021(Thursday)
+                </p>
+                <div class="flex items-center gap-1">
+                  <button>
+                    <PencilSquareIcon class="w-5 h-5 text-gray-500" />
+                  </button>
+                  <button>
+                    <TrashIcon class="w-5 h-5 text-gray-500" />
+                  </button>
+                </div>
+              </header>
+
+              <div
+                class="border border-slate-200 rounded-md px-3 py-4 border-l-4 border-l-cyan-500"
+              >
+                <div class="items-center grid grid-cols-4">
+                  <div class="flex items-center gap-2">
+                    <img
+                      class="w-8 h-8 rounded-full"
+                      src="@/assets/images/pp-3.jpg"
+                      alt="pp-1"
+                    />
+
+                    <div class="text-xs">
+                      <p class="font-semibold">Bagus Fakri</p>
+                      <p class="text-gray-600">Culture Round - Onsite</p>
+                    </div>
+                  </div>
+
+                  <div class="text-xs">
+                    <p class="font-semibold">3:30 - 4:30PM</p>
+                    <p class="text-gray-600">1 Hour Interview</p>
+                  </div>
+
+                  <div class="text-xs">
+                    <p class="font-semibold">Link Room Meet</p>
+                    <p class="text-gray-600">
+                      Scheduled by
+
+                      <span class="font-medium text-gray-800">Bagus Fikri</span>
+                    </p>
+                  </div>
+
+                  <button
+                    class="text-green-700 text-xs font-semibold border border-green-700 px-3 py-2 rounded-md w-fit justify-self-end"
+                  >
+                    Submit Feedback
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
