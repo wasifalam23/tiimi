@@ -7,10 +7,14 @@ import {
   ChevronRightIcon,
   ChevronLeftIcon,
   StarIcon as SolidStartIcon,
+  ArrowDownTrayIcon,
 } from '@heroicons/vue/24/solid';
 import {
   ChatBubbleBottomCenterTextIcon,
   EnvelopeIcon,
+  PencilSquareIcon,
+  LinkIcon,
+  PrinterIcon,
 } from '@heroicons/vue/24/outline';
 
 const { data } = defineProps(['data']);
@@ -29,7 +33,7 @@ watch(data.age, () => {
 <template>
   <div
     id="drawer-right"
-    class="fixed top-0 right-0 z-50 h-screen overflow-y-auto transition-transform translate-x-full bg-white w-1/2"
+    class="fixed top-0 right-0 z-50 h-screen overflow-y-auto transition-transform translate-x-full bg-white w-[45%]"
     tabindex="-1"
     aria-labelledby="drawer-right-label"
   >
@@ -191,7 +195,152 @@ watch(data.age, () => {
         role="tabpanel"
         aria-labelledby="details-tab"
       >
-        details
+        <div class="flex flex-col gap-4">
+          <div class="rounded border border-slate-300">
+            <div
+              class="flex justify-between items-center px-4 py-2 border-b border-b-slate-300"
+            >
+              <h3 class="text-sm font-semibold">Basic Information</h3>
+              <div class="flex gap-1 items-center">
+                <PencilSquareIcon class="w-6 h-6 text-slate-700" />
+                <span class="text-sm text-slate-700 font-normal"
+                  >Edit Info</span
+                >
+              </div>
+            </div>
+
+            <div class="p-4 grid grid-cols-[40fr_60fr] gap-y-4">
+              <div>
+                <span class="text-slate-500 text-sm font-medium">Name</span>
+                <p class="text-sm font-semibold text-gray-700">Cody Fisher</p>
+              </div>
+              <div>
+                <span class="text-slate-500 text-sm font-medium">Email</span>
+                <p class="text-sm font-semibold text-gray-700">
+                  example@email.com
+                </p>
+              </div>
+              <div>
+                <span class="text-slate-500 text-sm font-medium">Origin</span>
+                <p class="text-sm font-semibold text-gray-700">Sourced</p>
+              </div>
+              <div>
+                <span class="text-slate-500 text-sm font-medium">Phone</span>
+                <p class="text-sm font-semibold text-gray-700">+62 7583-9749</p>
+              </div>
+              <div>
+                <span class="text-slate-500 text-sm font-medium"
+                  >Candidate ID</span
+                >
+                <p class="text-sm font-semibold text-gray-700">TM_3_CFP</p>
+              </div>
+              <div>
+                <span class="text-slate-500 text-sm font-medium">Website</span>
+                <p class="text-sm font-semibold text-gray-700">
+                  www.example.com
+                </p>
+              </div>
+              <div>
+                <span class="text-slate-500 text-sm font-medium">Address</span>
+                <p class="text-sm font-semibold text-gray-700">
+                  abc Street, 12347
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded border border-slate-300">
+            <div
+              class="flex justify-between items-center px-4 py-2 border-b border-b-slate-300"
+            >
+              <h3 class="text-sm font-semibold">Professional Details</h3>
+              <div class="flex gap-1 items-center">
+                <PencilSquareIcon class="w-6 h-6 text-slate-700" />
+                <span class="text-sm text-slate-700 font-normal"
+                  >Edit Info</span
+                >
+              </div>
+            </div>
+
+            <div class="p-4 grid grid-cols-[40fr_60fr] gap-y-4">
+              <div>
+                <span class="text-slate-500 text-sm font-medium"
+                  >Current Job Title</span
+                >
+                <p class="text-sm font-semibold text-gray-700">
+                  UI/UX Designer
+                </p>
+              </div>
+              <div>
+                <span class="text-slate-500 text-sm font-medium"
+                  >Highest Qualification Held</span
+                >
+                <p class="text-sm font-semibold text-gray-700">
+                  Bachelors in Engineering
+                </p>
+              </div>
+              <div>
+                <span class="text-slate-500 text-sm font-medium"
+                  >Expected Sallery</span
+                >
+                <p class="text-sm font-semibold text-gray-700">-</p>
+              </div>
+              <div>
+                <span class="text-slate-500 text-sm font-medium"
+                  >Current Sallery</span
+                >
+                <p class="text-sm font-semibold text-gray-700">-</p>
+              </div>
+              <div>
+                <span class="text-slate-500 text-sm font-medium"
+                  >Experience in Years</span
+                >
+                <p class="text-sm font-semibold text-gray-700">3 Year</p>
+              </div>
+              <div>
+                <span class="text-slate-500 text-sm font-medium">Skype ID</span>
+                <p class="text-sm font-semibold text-gray-700">cody_fisher</p>
+              </div>
+              <div>
+                <span class="text-slate-500 text-sm font-medium"
+                  >Address Info</span
+                >
+                <p class="text-sm font-semibold text-gray-700">
+                  abc Street, 12347
+                </p>
+              </div>
+              <div>
+                <span class="text-slate-500 text-sm font-medium"
+                  >Skill Set</span
+                >
+
+                <div class="flex items-center gap-2">
+                  <div class="bg-blue-300 rounded-full">
+                    <p
+                      class="text-xs font-medium py-[.15rem] px-2 text-gray-800"
+                    >
+                      Html
+                    </p>
+                  </div>
+                  <div class="bg-blue-300 rounded-full">
+                    <p
+                      class="text-xs font-medium py-[.15rem] px-2 text-gray-800"
+                    >
+                      Css
+                    </p>
+                  </div>
+                  <div class="bg-blue-300 rounded-full">
+                    <p
+                      class="text-xs font-medium py-[.15rem] px-2 text-gray-800"
+                    >
+                      Sketching
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div
         class="hidden p-4 rounded-lg dark:bg-gray-800"
@@ -199,7 +348,134 @@ watch(data.age, () => {
         role="tabpanel"
         aria-labelledby="resume-tab"
       >
-        resume
+        <div>
+          <div class="flex items-center gap-1 mb-4">
+            <LinkIcon class="w-5 h-5 text-slate-600" />
+            <p class="text-sm font-medium">Cody_Fisher_Resume.pdf</p>
+          </div>
+
+          <div class="p-4 bg-slate-200">
+            <div class="bg-white shadow-md pt-2 pr-2 pl-6 pb-6">
+              <header class="flex justify-end mb-2">
+                <div class="flex gap-1 rounded-sm">
+                  <div class="border border-slate-400 w-fit p-1">
+                    <PrinterIcon class="w-5 h-5 text-gray-700" />
+                  </div>
+                  <div class="border border-slate-400 w-fit p-1 rounded-sm">
+                    <ArrowDownTrayIcon class="w-5 h-5 text-gray-700" />
+                  </div>
+                </div>
+              </header>
+
+              <div>
+                <div>
+                  <div class="flex justify-between items-center">
+                    <p class="text-base font-semibold">Cody Fisher</p>
+                    <span class="text-xs text-cyan-600 font-medium"
+                      >example@email.com</span
+                    >
+                  </div>
+                  <p class="text-sm">
+                    UI/UX Designer with Human Centered Design Approach
+                  </p>
+                </div>
+
+                <div class="mt-3">
+                  <h3 class="font-medium text-sm">Profile</h3>
+                  <p class="text-xs text-gray-700 font-medium">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Animi nihil quam id? Possimus, repellendus illo
+                    necessitatibus assumenda adipisci delectus totam Animi nihil
+                    quam id? Possimus, repellendus illo necessitatibus assumenda
+                    adipisci delectus totam
+                  </p>
+                </div>
+
+                <div class="mt-4 border-b border-b-slate-200 pb-3">
+                  <h3 class="font-medium text-sm mb-1">Experience</h3>
+                  <p class="text-xs font-medium text-gray-700">
+                    Marketing Manager
+                  </p>
+                  <div class="flex justify-between mb-2">
+                    <p class="text-xs text-gray-500">San Francisco USA</p>
+                    <p class="text-xs text-gray-500">
+                      Feb 2017 - currently employed
+                    </p>
+                  </div>
+                  <ul class="text-xs list-disc ml-4">
+                    <li>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Natus aspernatur voluptatem placeat error sapiente
+                      voluptatum?
+                    </li>
+                    <li>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Natus aspernatur voluptatem placeat error
+                    </li>
+                    <li>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Natus aspernatur voluptatem placeat error sapiente
+                      voluptatum? Natus aspernatur voluptatem placeat error
+                      sapiente voluptatum?
+                    </li>
+                    <li>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="mt-4">
+                  <h3 class="font-medium text-sm mb-1">Analyst</h3>
+                  <p class="text-xs font-medium text-gray-700">
+                    Marketing Manager
+                  </p>
+                  <div class="flex justify-between mb-2">
+                    <p class="text-xs text-gray-500">San Francisco USA</p>
+                    <p class="text-xs text-gray-500">
+                      Feb 2017 - currently employed
+                    </p>
+                  </div>
+                  <ul class="text-xs list-disc ml-4">
+                    <li>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Natus aspernatur voluptatem placeat error sapiente
+                      voluptatum?
+                    </li>
+                    <li>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Natus aspernatur voluptatem placeat error
+                    </li>
+                    <li>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Natus aspernatur voluptatem placeat error sapiente
+                      voluptatum? Natus aspernatur voluptatem placeat error
+                      sapiente voluptatum?
+                    </li>
+                    <li>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="mt-4">
+                  <h3 class="font-medium text-sm mb-1">Education</h3>
+                  <p class="text-xs font-medium text-gray-700">
+                    MSc. Stratgic Marketing
+                  </p>
+                  <div class="flex justify-between mb-2">
+                    <p class="text-xs text-gray-500">
+                      Liberty school of management
+                    </p>
+                    <p class="text-xs text-gray-500">Feb 2017 - Sept 2017</p>
+                  </div>
+                  <ul class="text-xs list-disc ml-4">
+                    <li>Graduate with education</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div
         class="hidden p-4 rounded-lg dark:bg-gray-800"
